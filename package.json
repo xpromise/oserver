@@ -1,0 +1,44 @@
+{
+  "name": "oserver",
+  "version": "0.0.2",
+  "description": "NodeJS静态资源服务器",
+  "keywords": [
+    "server",
+    "http server"
+  ],
+  "main": "src/index.js",
+  "repository": {
+    "url": "https://github.com/xpromise/oserver"
+  },
+  "bin": {
+    "oserver": "bin/oserver.js"
+  },
+  "scripts": {
+    "lint": "eslint . --cache",
+    "fix": "eslint . --fix"
+  },
+  "lint-staged": {
+    "*.js": "eslint . --cache"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "author": "xpromise",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "etag": "^1.8.1",
+    "pug": "^2.0.4",
+    "yargs": "^15.3.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-angular": "^8.3.4",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8"
+  }
+}
